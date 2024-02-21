@@ -1,6 +1,6 @@
 # oracle-One-Alura-Desafio
 
-## - O desafio é criar um encriptador e decriptador
+## - O desafio é criar um encriptador e descriptador
 ## - Deve possuir uma tela para que o usuário insira os dados que serão encriptados
 
 ### Link para o figma

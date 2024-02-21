@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <div class="input-container">
-      <label for="text">Text to Encrypt/Decrypt:</label>
-      <input type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
+      <input class="digite-seu-texto" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
       <div class="button-container">
         <button @click="encrypt">Encrypt</button>
         <button @click="decrypt">Decrypt</button>
@@ -13,9 +12,11 @@
     </div>
   </div>
 </template>
-
+<style src="./style.css"></style>
 <script>
 import CryptoJS from 'crypto-js'; // Import CryptoJS library
+// import "./style.css"
+
 
 export default {
   data() {
