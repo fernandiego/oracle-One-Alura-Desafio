@@ -4,7 +4,7 @@
     height: 1024px;
     top: 622px;
     left: -2277px;
-
+    background-color: #F3F5FC;
 }
 
 .input-container {
@@ -17,18 +17,46 @@
 
 .button-container {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
 }
 
-.output-container textarea{
+.output-container textarea {
     flex: 2;
-    padding: 20px;
+    padding: 10px;
     width: 150px;
     height: 944px;
     top: 40px;
     left: 100px;
+    margin-right: 30px;
     border-radius: 32px;
     background: #FFFFFF;
-;
+    /*box-shadow: -4px 4px 8px rgba(0,0,0, 0.2);*/
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.14);
+
+
+}
+
+.button-cript {
+    background: #0A3871;
+    color: #FFFFFF;
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    gap: 8px; /* Note: `gap` is a property for CSS Grid, not for general use */
+}
+
+.button-descript {
+    background: #D8DFE8;
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid;
+    gap: 8px;
+
 
 }
 

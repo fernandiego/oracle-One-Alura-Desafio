@@ -3,8 +3,8 @@
     <div class="input-container">
       <input class="digite-seu-texto" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
       <div class="button-container">
-        <button @click="encrypt">Encrypt</button>
-        <button @click="decrypt">Decrypt</button>
+        <button class="button-cript" @click="encrypt">Encrypt</button>
+        <button class="button-descript" @click="decrypt">Decrypt</button>
       </div>
     </div>
     <div class="output-container">
