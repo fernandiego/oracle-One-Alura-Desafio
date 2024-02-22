@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="input-container">
-      <input class="digite-seu-texto" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
+      <input class="input-text" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
       <div class="button-container">
         <button class="button-cript" @click="encrypt">Encrypt</button>
         <button class="button-descript" @click="decrypt">Decrypt</button>
