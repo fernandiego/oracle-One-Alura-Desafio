@@ -1,13 +1,16 @@
 <template>
   <div class="container">
+    <div class="logo-alura">
+      <img src="./assets/Frame%206.svg">
+    </div>
     <div class="input-container">
       <input class="input-text" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
       <div class="texto-exclamcao">
         <img src="./assets/bi_exclamation-circle-fill.svg">
         Apenas letras minúsculas e sem acento.</div>
       <div class="button-container">
-        <button class="button-cript" @click="encrypt">Encrypt</button>
-        <button class="button-descript" @click="decrypt">Decrypt</button>
+        <button class="button-cript" @click="encrypt">Criptografar</button>
+        <button class="button-descript" @click="decrypt">Descriptografar</button>
       </div>
     </div>
     <div class="output-container">
