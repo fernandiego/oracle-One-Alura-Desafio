@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    width: 1080px;
-    height: 1024px;
+    width: 1440px;
+    height: 1080px;
     top: 622px;
     left: -2277px;
     background-color: #F3F5FC;
@@ -16,11 +16,41 @@
 }
 
 .input-text {
-    height: 480px;
+    height: 48px;
     background-color: #F3F5FC;
     border: none;
     font-weight: bold;
-    font-size: 30;
+    font-size: 40px;
+    margin-left: 150px;
+    margin-top: 168px;
+}
+
+.output-container {
+    padding: 10px;
+    width: 400px;
+    height: 980px;
+    top: 40px;
+    left: 1000px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 32px;
+    background: #FFFFFF;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.14);
+
+}
+
+.output-container textarea {
+    /*padding: 10px;*/
+    width: 400px;
+    height: 400px;
+    border: none;
+    top: 40px;
+    left: 1000px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 32px;
+    background: #FFFFFF;
+    /*box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.14);*/
 }
 
 .button-container {
@@ -28,23 +58,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
-}
-
-.output-container textarea {
-    flex: 2;
-    padding: 10px;
-    width: 250px;
-    height: 900px;
-    top: 40px;
-    left: 100px;
-    margin-right: 30px;
-    margin-top: 30px;
-    /*border-radius: 32px;*/
-    background: #FFFFFF;
-    /*box-shadow: -4px 4px 8px rgba(0,0,0, 0.2);*/
-    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.14);
-
-
+    margin-left: 100px;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
 }
 
 .button-cript {
@@ -54,7 +71,7 @@
     height: 67px;
     padding: 24px;
     border-radius: 24px;
-    gap: 8px; /* Note: `gap` is a property for CSS Grid, not for general use */
+    gap: 8px;
 }
 
 .button-descript {
@@ -64,9 +81,31 @@
     padding: 24px;
     border-radius: 24px;
     border: 1px solid;
-    gap: 8px;
-
-
 }
 
+.img {
+    width: 336px;
+    height: 304px;
+    margin-top: 283px;
+}
+
+.digite-um-texto {
+   text-align: center;
+    font-size: 16px;
+}
+
+.texto-nenhuma-mensagem {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logo-alura {
+
+}
+.texto-exclamcao {
+    margin-top: 650px;
+    margin-left: 105px;
+    font-size: 16px;
+}
 
