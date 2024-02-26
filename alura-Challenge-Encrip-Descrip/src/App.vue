@@ -15,15 +15,15 @@
       </div>
     </div>
     <div class="output-container">
-      <textarea v-model="outputText" v-if="outputText"></textarea>
-      <img class="img" v-if="!outputText" src="./assets/High%20quality%20products%201%201.svg">
-      <div class="texto-nenhuma-mensagem" v-if="!outputText">
+      <textarea v-model="outputText" v-if="started"></textarea>
+      <img class="img" v-if="!started" src="./assets/High%20quality%20products%201%201.svg">
+      <div class="texto-nenhuma-mensagem" v-if="!started">
         Nenhuma mensagem encontrada
       </div>
-      <div class="digite-um-texto" v-if="!outputText">
+      <div class="digite-um-texto" v-if="!started">
         Digite um texto que você deseja criptografar ou descriptografar.
       </div>
-      <div class="button-copy-container">
+      <div class="button-copy-container" v-if="started">
         <button class="button-copy" @click="copyOutputText">Copiar</button>
       </div>
 
@@ -40,12 +40,14 @@ export default {
   data() {
     return {
       inputText: "",
-      outputText: ""
+      outputText: "",
+      started: false
     };
   },
   methods: {
     encrypt() {
       this.outputText = CryptoJS.AES.encrypt(this.inputText, "secret_key").toString();
+      this.started = true
     },
     decrypt() {
       try {
@@ -53,6 +55,7 @@ export default {
       } catch (error) {
         console.error("Decryption error:", error);
         this.outputText = "Error: Unable to decrypt. Make sure the input is a valid encrypted text.";
+        this.started = true
       }
     },
     copyOutputText() {

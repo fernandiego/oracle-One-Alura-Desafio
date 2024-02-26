@@ -130,8 +130,11 @@
 
 .button-copy-container {
     display: flex;
-    justify-content: center; /* Center the button horizontally */
+    justify-content: flex-end; /* Center the button horizontally */
     align-items: center; /* Center the button vertically */
+    flex-direction: column;
+    margin-top: 455px;
+
 }
 
 .button-copy {
