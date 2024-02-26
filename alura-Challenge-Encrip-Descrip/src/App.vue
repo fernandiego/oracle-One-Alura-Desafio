@@ -7,7 +7,8 @@
       <input class="input-text" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
       <div class="texto-exclamcao">
         <img src="./assets/bi_exclamation-circle-fill.svg">
-        Apenas letras minúsculas e sem acento.</div>
+        Apenas letras minúsculas e sem acento.
+      </div>
       <div class="button-container">
         <button class="button-cript" @click="encrypt">Criptografar</button>
         <button class="button-descript" @click="decrypt">Descriptografar</button>
@@ -16,10 +17,15 @@
     <div class="output-container">
       <textarea v-model="outputText" v-if="outputText"></textarea>
       <img class="img" v-if="!outputText" src="./assets/High%20quality%20products%201%201.svg">
-      <div class="texto-nenhuma-mensagem">
+      <div class="texto-nenhuma-mensagem" v-if="!outputText">
         Nenhuma mensagem encontrada
       </div>
-      <div class="digite-um-texto">Digite um texto que você deseja criptografar ou descriptografar.</div>
+      <div class="digite-um-texto" v-if="!outputText">
+        Digite um texto que você deseja criptografar ou descriptografar.
+      </div>
+      <div class="button-copy-container">
+        <button class="button-copy" @click="copyOutputText">Copiar</button>
+      </div>
 
     </div>
   </div>
@@ -48,6 +54,14 @@ export default {
         console.error("Decryption error:", error);
         this.outputText = "Error: Unable to decrypt. Make sure the input is a valid encrypted text.";
       }
+    },
+    copyOutputText() {
+      const textarea = document.createElement('textarea');
+      textarea.value = this.outputText;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
     }
   }
 };
