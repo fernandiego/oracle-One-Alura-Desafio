@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="logo-alura">
-      <img src="./assets/Frame%206.svg">
+      <img src="assets/Frame%206.svg">
     </div>
     <div class="input-container">
       <input class="input-text" type="text" v-model="inputText" placeholder="Digite seu texto" id="text">
       <div class="texto-exclamcao">
-        <img src="./assets/bi_exclamation-circle-fill.svg">
+        <img src="assets/bi_exclamation-circle-fill.svg">
         Apenas letras minúsculas e sem acento.
       </div>
       <div class="button-container">
@@ -16,7 +16,7 @@
     </div>
     <div class="output-container">
       <textarea v-model="outputText" v-if="started"></textarea>
-      <img class="img" v-if="!started" src="./assets/High%20quality%20products%201%201.svg">
+      <img class="img" v-if="!started" src="assets/High%20quality%20products%201%201.svg">
       <div class="texto-nenhuma-mensagem" v-if="!started">
         Nenhuma mensagem encontrada
       </div>
@@ -30,7 +30,7 @@
     </div>
   </div>
 </template>
-<style src="./style.css"></style>
+<style src="style.css"></style>
 <script>
 import CryptoJS from 'crypto-js'; // Import CryptoJS library
 // import "./style.css"
